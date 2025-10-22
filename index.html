@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visual Shadow Generator | CSS Box-Shadow Generator</title>
+
+    <meta name="description" content="Interactive CSS box-shadow generator. Create complex shadows visually and copy the ready-made code for free.">
+
+    <link rel="canonical" href="https://css-shadow-gen.netlify.app/"> <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-180.png">
+
+    <meta name="theme-color" content="#1a1b1e">
+
+    <meta property="og:url" content="https://css-shadow-gen.netlify.app/"> 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Visual CSS Shadow Generator">
+    <meta property="og:description" content="A simple, interactive tool to create CSS box-shadows visually and copy the code.">
+    <meta property="og:site_name" content="CSS Shadow Generator">
+    
+    <meta property="og:image" content="https://css-shadow-gen.netlify.app/assets/images/og-preview-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://css-shadow-gen.netlify.app/">
+    <meta name="twitter:title" content="Visual CSS Shadow Generator">
+    <meta name="twitter:description" content="A simple, interactive tool to create CSS box-shadows visually and copy the code.">
+    <meta name="twitter:image" content="https://css-shadow-gen.netlify.app/assets/images/og-preview-1200x630.png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>CSS `box-shadow` Generator</h1>
+
+    <div class="container">
+        <div class="controls">
+            <label for="x-offset">Horizontal offset (px):</label>
+            <input type="range" id="x-offset" min="-100" max="100" value="10">
+
+            <label for="y-offset">Vertical offset (px):</label>
+            <input type="range" id="y-offset" min="-100" max="100" value="10">
+
+            <label for="blur-radius">Blur (px):</label>
+            <input type="range" id="blur-radius" min="0" max="100" value="5">
+
+            <label for="spread-radius">Spread (px):</label>
+            <input type="range" id="spread-radius" min="-100" max="100" value="0">
+
+            <label for="shadow-color">Shade color:</label>
+            <input type="color" id="shadow-color" value="#000000">
+
+            <input type="checkbox" id="inset-shadow">
+            <label for="inset-shadow">
+                Inset shadow
+            </label>
+        </div>
+
+        <div class="output">
+            <div id="preview-box"></div>
+            
+            <textarea id="result-code" readonly></textarea>
+            <button id="copy-btn">Copy code</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
